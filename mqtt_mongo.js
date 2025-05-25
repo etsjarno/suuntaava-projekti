@@ -1,7 +1,7 @@
 
 //MQTT-välityspalvelimen määrittely
 const mqtt    = require('mqtt');
-const broker = 'mqtt://test.mosquitto.org';
+const broker = 'mqtt://automaatio:Z0od2PZF65jbtcXu@automaatio.cloud.shiftr.io';
 const user = '';
 const pw = ''; 
 
@@ -12,7 +12,7 @@ mq = mqtt.connect(broker, {
 });
 
 //tilataan oikea topic
-mq.subscribe('automaatio/#');
+mq.subscribe('automaatio2/#');
 
 //liitytään välityspalvelimeen
 mq.on('connect', function(){
